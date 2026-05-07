@@ -55,7 +55,7 @@ type CheckoutModalState = {
 }
 
 const ctaPrimary = 'Start Pro annual'
-const ctaSecondary = 'Run fit check'
+const ctaSecondary = 'Review plans'
 
 const plans: Array<{
   id: PlanId
@@ -823,8 +823,8 @@ export default function App() {
                 type="button"
                 className="kro-btn kro-btn-ghost"
                 onClick={() => {
-                  trackEvent('workspace_focus')
-                  scrollToHashTarget('#workspace')
+                  trackEvent('pricing_review', { source: 'hero-secondary' })
+                  scrollToHashTarget('#pricing')
                 }}
               >
                 <Gauge size={18} />
