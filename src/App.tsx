@@ -835,6 +835,10 @@ export default function App() {
                 Inspect GitHub path
               </button>
             </div>
+            <p className="kro-payment-note">
+              <CheckCircle2 size={16} />
+              Pro annual is selected. Annual saves 50%.
+            </p>
 
             <div className="kro-trust-row">
               {trustLinks.map((link) => (

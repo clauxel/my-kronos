@@ -237,6 +237,25 @@ h3 {
   align-items: center;
 }
 
+.kro-payment-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  margin: -8px 0 0;
+  padding: 8px 10px;
+  border-radius: var(--radius);
+  color: #17483d;
+  background: rgba(223, 247, 233, 0.76);
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  font-size: 0.92rem;
+  font-weight: 850;
+}
+
+.kro-payment-note svg {
+  color: var(--teal);
+}
+
 .kro-btn {
   min-height: 46px;
   border: 1px solid transparent;
@@ -1214,6 +1233,12 @@ h3 {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
+  }
+
+  .kro-payment-note {
+    width: 100%;
+    justify-content: center;
+    margin-top: -4px;
   }
 
   .kro-btn {
