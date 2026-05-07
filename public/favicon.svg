@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kronos AI">
+  <defs>
+    <linearGradient id="g" x1="6" x2="58" y1="58" y2="6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f766e" />
+      <stop offset="0.55" stop-color="#1d4ed8" />
+      <stop offset="1" stop-color="#f97316" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#07110f" />
+  <path d="M18 16h8v16l14-16h10L34 34l17 14H40L26 36v12h-8V16Z" fill="url(#g)" />
+  <path d="M13 48h38" stroke="#e7f7ef" stroke-width="3" stroke-linecap="round" opacity=".8" />
+</svg>

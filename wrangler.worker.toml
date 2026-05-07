@@ -1,0 +1,34 @@
+name = "my-kronos"
+main = "worker/index.js"
+compatibility_date = "2026-05-07"
+workers_dev = true
+routes = [
+  { pattern = "kronos.rest/*", zone_name = "kronos.rest" },
+  { pattern = "www.kronos.rest/*", zone_name = "kronos.rest" }
+]
+
+[vars]
+CREEM_API_BASE = "https://api.creem.io"
+CREEM_ENV = "live"
+
+[assets]
+directory = "./dist"
+binding = "SITE_ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = [
+  "/",
+  "/kronos-ai",
+  "/kronos-github",
+  "/kronos-login",
+  "/kronos-hr",
+  "/kronos-mythology",
+  "/kronos-company",
+  "/kronos-software",
+  "/kronos-golf",
+  "/pricing",
+  "/privacy",
+  "/terms",
+  "/sitemap.xml",
+  "/robots.txt",
+  "/api/*"
+]
