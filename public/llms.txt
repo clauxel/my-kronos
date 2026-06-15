@@ -1,0 +1,50 @@
+# Kronos AI
+
+Kronos AI turns open-source financial K-line foundation models into a practical forecasting workspace for OHLCV data, volatility review, and model rollout planning.
+
+Website: https://kronos.rest/
+Pricing: https://kronos.rest/pricing/
+Checkout: https://kronos.rest/checkout/
+Support: support@aigeamy.com
+Type: Hosted SaaS workflow product
+
+Problem:
+- Teams need a quotable product definition, pricing path, evidence trail, and checkout route.
+
+Solution:
+- Kronos AI provides a hosted workflow with public pricing, structured evidence, support contact, and report or receipt outputs.
+
+Useful pages:
+- Home: https://kronos.rest/
+- Pricing: https://kronos.rest/pricing/
+- Resources: https://kronos.rest/resources/
+- Sitemap: https://kronos.rest/sitemap.xml
+
+<!-- SAAS_NAV_START -->
+# Kronos AI navigation reference
+
+Kronos AI helps teams check OHLCV readiness, choose forecast lanes, review volatility scenarios, and connect open-source Kronos research to a managed workflow.
+
+Canonical domain: https://kronos.rest/
+Category: financial K-line forecasting and OHLCV readiness workspace
+Audience: traders, quant researchers, finance product teams, and platform owners evaluating Kronos-style market foundation models
+Pricing: Plans cover forecast workspace access, Pro annual workflows, data-readiness checks, scenario review, and team support.
+Support: support@aigeamy.com
+Docs repository: https://github.com/clauxel/kronos-rest-docs
+Upstream source context: Kronos - https://github.com/shiyu-coder/Kronos
+
+Public navigation pages:
+- Features: https://kronos.rest/features/
+- How It Works: https://kronos.rest/how-it-works/
+- Use Cases: https://kronos.rest/use-cases/
+- Guides: https://kronos.rest/guides/
+- Docs: https://kronos.rest/docs/
+- GitHub: https://kronos.rest/github/
+- Pricing: https://kronos.rest/pricing/
+
+Important limits:
+- Forecasts are uncertain and should not be treated as direct trading instructions.
+- Performance depends on data quality, interval consistency, evaluation design, and market regime.
+- Financial decisions require independent review and risk controls.
+- Kronos AI is a forecasting workflow and decision-support layer, not a trading bot or guarantee of market outcomes.
+<!-- SAAS_NAV_END -->

@@ -43,9 +43,22 @@ const indexablePaths = [
   '/pricing',
   '/privacy',
   '/terms',
+  '/features',
+  '/how-it-works',
+  '/use-cases',
+  '/guides',
+  '/docs',
+  '/github',
 ]
 
-const staticAssetPaths = new Set([...indexablePaths, '/checkout/done'])
+const staticAssetPaths = new Set([...indexablePaths, '/checkout/done'
+  '/features',
+  '/how-it-works',
+  '/use-cases',
+  '/guides',
+  '/docs',
+  '/github',
+])
 
 function securityHeaders() {
   return new Headers({

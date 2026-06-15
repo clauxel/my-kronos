@@ -25,4 +25,3 @@ npm run pages:deploy
 ```
 
 Payment uses Creem through `/api/checkout`. Configure `API_PROD_KEY` as a Cloudflare secret for the Worker and Pages production environment.
-
