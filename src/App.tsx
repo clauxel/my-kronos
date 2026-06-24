@@ -114,7 +114,7 @@ const workflowCards = [
   },
   {
     title: 'Commercial handoff',
-    body: 'Open checkout in a centered Creem window, keep the original page visible, and return to the homepage after payment.',
+    body: 'Open checkout in a centered Polar window, keep the original page visible, and return to the homepage after payment.',
     icon: <ShieldCheck size={21} />,
   },
 ]
@@ -165,7 +165,7 @@ const legalTermsSections = [
   {
     title: 'Payments and returns',
     paragraphs: [
-      'Payments are processed by Creem in a hosted popup window. Successful checkouts return the user to the homepage.',
+      'Payments are processed by Polar in a hosted popup window. Successful checkouts return the user to the homepage.',
       'Displayed annual pricing reflects a 50% discount versus the monthly run-rate for the same plan.',
     ],
   },
@@ -379,7 +379,7 @@ export default function App() {
     trackEvent('planner_change', { key, value })
   }
 
-  async function startHostedCheckout(planId: PlanId, nextBilling: Billing, loadingKey: string, provider = 'creem') {
+  async function startHostedCheckout(planId: PlanId, nextBilling: Billing, loadingKey: string, provider = 'polar') {
     setSelectedPlanId(planId)
     setBilling(nextBilling)
     setCheckoutLoadingKey(loadingKey)
@@ -389,7 +389,7 @@ export default function App() {
     const popup = openCenteredCheckoutWindow()
 
     try {
-      const url = await createCheckoutSession(planId, nextBilling, provider === 'nowpayments' ? '/api/nowpayments-checkout' : '/api/checkout')
+      const url = await createCheckoutSession(planId, nextBilling, provider === 'polar' ? '/api/polar-checkout' : '/api/checkout')
       const popupOpened = sendPopupToCheckout(popup, url)
       if (!popupOpened) {
         try {
@@ -514,7 +514,7 @@ export default function App() {
           {checkoutUrl ? (
             <div className="kro-checkout-copy">
               <p className="kro-eyebrow">Secure checkout</p>
-              <h2 id="checkout-title">Creem checkout opened.</h2>
+              <h2 id="checkout-title">Polar checkout opened.</h2>
               <p className="kro-muted">
                 Complete payment in the centered popup. This page stays in place and returns to the homepage after success.
               </p>
@@ -537,7 +537,7 @@ export default function App() {
               <p className="kro-eyebrow">Popup needed</p>
               <h2 id="checkout-title">Checkout could not open yet.</h2>
               <p className="kro-muted">
-                Allow the payment popup and try again. Kronos AI keeps payment in a separate Creem window so the original page is not replaced.
+                Allow the payment popup and try again. Kronos AI keeps payment in a separate Polar window so the original page is not replaced.
               </p>
               <div className="kro-checkout-actions">
                 <button
@@ -772,7 +772,7 @@ export default function App() {
                 <button
                   type="button"
                   className="kro-btn kro-btn-ghost"
-                  onClick={() => void startHostedCheckout(plan.id, billing, `${loadingKey}-wallet`, 'nowpayments')}
+                  onClick={() => void startHostedCheckout(plan.id, billing, `${loadingKey}-wallet`, 'polar')}
                   disabled={checkoutLoadingKey !== null}
                 >
                   {checkoutLoadingKey === `${loadingKey}-wallet` ? 'Opening USDC wallet...' : 'Pay with USDC Wallet'}
@@ -795,7 +795,7 @@ export default function App() {
           </article>
           <article>
             <h3>Does payment replace this page?</h3>
-            <p>No. Checkout opens in a centered Creem popup with the original page blurred in the background.</p>
+            <p>No. Checkout opens in a centered Polar popup with the original page blurred in the background.</p>
           </article>
         </div>
       ) : null}
@@ -861,7 +861,7 @@ export default function App() {
             <div className="kro-hero-proof">
               <div>
                 <span>Default workflow</span>
-                <strong>Fit check to Pro annual to Creem popup to homepage return</strong>
+                <strong>Fit check to Pro annual to Polar popup to homepage return</strong>
               </div>
               <div>
                 <span>Model context</span>
@@ -1020,7 +1020,7 @@ export default function App() {
           <div>
             <p className="kro-eyebrow">Recommended next step</p>
             <h2>Keep the product page open and start Pro annual only when the fit is clear.</h2>
-            <p>Checkout stays in a centered Creem popup, with annual billing selected by default.</p>
+            <p>Checkout stays in a centered Polar popup, with annual billing selected by default.</p>
           </div>
           <div className="kro-article-cta-actions">
             <button type="button" className="kro-btn kro-btn-primary" onClick={() => startDefaultCheckout(`article-${page.path}`)}>
@@ -1043,7 +1043,7 @@ export default function App() {
         <p className="kro-eyebrow">Pricing</p>
         <h1>Kronos AI pricing starts with the middle plan selected and annual billing already on.</h1>
         <p className="kro-lede">
-          The plan table keeps choice clear: Starter for one lane, Pro for serious evaluation, Scale for production gates. Payment opens in a centered Creem popup.
+          The plan table keeps choice clear: Starter for one lane, Pro for serious evaluation, Scale for production gates. Payment opens in a centered Polar popup.
         </p>
       </section>
       {renderPricingSection(true)}

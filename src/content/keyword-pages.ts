@@ -161,7 +161,7 @@ export const keywordPages: KeywordPage[] = [
         heading: 'If you need the Kronos AI workspace',
         paragraphs: [
           'The forecasting workspace starts from plan selection and hosted checkout. Pro annual is selected by default because most teams evaluating financial models need enough room for real OHLCV data review, not only a small demo.',
-          'Checkout opens in a centered Creem window while this page stays in place. After payment succeeds, the popup returns you to the homepage so onboarding can continue without losing context.',
+          'Checkout opens in a centered Polar window while this page stays in place. After payment succeeds, the popup returns you to the homepage so onboarding can continue without losing context.',
         ],
       },
       {
@@ -181,7 +181,7 @@ export const keywordPages: KeywordPage[] = [
       {
         question: 'Why does checkout open in a popup?',
         answer:
-          'It lets you finish Creem payment while keeping the product page available in the background, which reduces accidental drop-off during plan review.',
+          'It lets you finish Polar payment while keeping the product page available in the background, which reduces accidental drop-off during plan review.',
       },
       {
         question: 'What happens after payment succeeds?',
@@ -372,7 +372,7 @@ export const keywordPages: KeywordPage[] = [
           'Readiness check for market, cadence, columns, and horizon.',
           'Forecast plan output with model suggestion and rollout notes.',
           'Pricing that defaults to Pro annual with a 50% annual discount.',
-          'Creem checkout in a centered popup so the page stays open.',
+          'Polar checkout in a centered popup so the page stays open.',
         ],
       },
       {
